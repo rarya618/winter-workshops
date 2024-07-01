@@ -4,6 +4,8 @@ const SignIn = () => {
   // write code here
 
   const signIn = (event: FormEvent) => {
+    event.preventDefault();
+    
     // write function code here
   }
 
