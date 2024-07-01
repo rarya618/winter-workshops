@@ -4,12 +4,12 @@ const SignIn = () => {
   // write code here
 
   const signIn = (event: FormEvent) => {
-    // write function data here
+    // write function code here
   }
 
-  // create output here
   return (<form onSubmit={signIn}>
     <h1>Sign in</h1>
+    {/* create components here */}
   </form>)
 }
 
