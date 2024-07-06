@@ -1,5 +1,17 @@
 import { FormEvent } from "react"
 
+export type FormInput = {
+  label: string, 
+  id: string, 
+  type: string
+}
+
+export const GenerateFormElements = (formInputs: FormInput[]) => {
+  return <>
+    {/* write element generation code here */}
+  </>
+}
+
 const SignIn = () => {
   // write code here
 
