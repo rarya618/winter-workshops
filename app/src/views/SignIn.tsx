@@ -7,14 +7,12 @@ export type FormInput = {
 }
 
 export const GenerateFormElements = (formInputs: FormInput[]) => {
-  return <>
-    {formInputs.map(formInput => {
-      return (<div>
-        <label>{formInput.label}</label>
-        <input id={formInput.id} type={formInput.type}/>
-      </div>)
-    })}
-  </>
+  return formInputs.map(formInput => {
+    return (<div>
+      <label>{formInput.label}</label>
+      <input id={formInput.id} type={formInput.type}/>
+    </div>)
+  })
 }
 
 const SignIn = () => {
