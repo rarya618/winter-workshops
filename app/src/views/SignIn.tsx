@@ -1,7 +1,24 @@
 import { FormEvent } from "react";
 
+export type FormInput = {
+  label: string, 
+  id: string, 
+  type: string
+}
+
+export const GenerateFormElements = (formInputs: FormInput[]) => {
+  return <>
+    {formInputs.map(formInput => {
+      return (<div>
+        <label>{formInput.label}</label>
+        <input id={formInput.id} type={formInput.type}/>
+      </div>)
+    })}
+  </>
+}
+
 const SignIn = () => {
-  let formInputs = [
+  let formInputs: FormInput[] = [
     {label: "Email", id: "email", type: "email"},
     {label: "Password", id: "password", type: "password"}
   ];
@@ -33,12 +50,8 @@ const SignIn = () => {
 
   return (<form onSubmit={signIn}>
     <h1>Sign in</h1>
-    {formInputs.map(formInput => {
-      return (<div>
-        <label>{formInput.label}</label>
-        <input id={formInput.id} type={formInput.type}/>
-      </div>)
-    })}
+    {GenerateFormElements(formInputs)}
+    <button>Submit</button>
   </form>)
 }
 
