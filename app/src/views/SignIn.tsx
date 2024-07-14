@@ -26,7 +26,7 @@ const SignIn = () => {
   }
 
   return (<form onSubmit={signIn}>
-    <h1 className="text-center">Sign in</h1>
+    <h1>Sign in</h1>
     {/* create components here */}
   </form>)
 }

@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router"
+
+import './App.css'
 import SignIn from "./views/SignIn"
 import PageNotFound from "./views/PageNotFound"
 import SignUp from "./views/SignUp"
@@ -15,10 +17,10 @@ let links = [
 function App() {
 
   return (
-    <div className="flex">
-      <div className="flex">
+    <div>
+      <div>
         {links.map(link => {
-          return <Link className="p-1" to={link.link}>{link.text}</Link>
+          return <Link to={link.link}>{link.text}</Link>
         })}
       </div>
       <Routes>
