@@ -3,6 +3,7 @@ import SignIn from "./views/SignIn"
 import PageNotFound from "./views/PageNotFound"
 import SignUp from "./views/SignUp"
 import { Link } from "react-router-dom"
+import AccountView from "./views/AccountView"
 
 // main App component
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div>
         <Link to={"sign-in"}>Sign in</Link>
         <Link to={"sign-up"}>Sign up</Link>
+        <Link to={"account"}>Account</Link>
       </div>
       <Routes>
         <Route 
@@ -25,6 +27,10 @@ function App() {
         <Route 
           path="sign-up" 
           element={<SignUp />}
+        />
+        <Route 
+          path="account" 
+          element={<AccountView />}
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
