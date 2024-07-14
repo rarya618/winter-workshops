@@ -4,16 +4,23 @@ import PageNotFound from "./views/PageNotFound"
 import SignUp from "./views/SignUp"
 import { Link } from "react-router-dom"
 import AccountView from "./views/AccountView"
+import './App.css'
+
+let links = [
+ { text: "Sign in", link: "sign-in" },
+ { text: "Sign up", link: "sign-up" },
+ { text: "Account", link: "account" },
+]
 
 // main App component
 function App() {
 
   return (
-    <div>
-      <div>
-        <Link to={"sign-in"}>Sign in</Link>
-        <Link to={"sign-up"}>Sign up</Link>
-        <Link to={"account"}>Account</Link>
+    <div className="flex">
+      <div className="flex">
+        {links.map(link => {
+          return <Link className="p-1" to={link.link}>{link.text}</Link>
+        })}
       </div>
       <Routes>
         <Route 
