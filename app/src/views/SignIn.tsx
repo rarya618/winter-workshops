@@ -8,9 +8,9 @@ export type FormInput = {
 
 export const GenerateFormElements = (formInputs: FormInput[]) => {
   return formInputs.map(formInput => {
-    return (<div>
+    return (<div className="flex">
       <label>{formInput.label}</label>
-      <input id={formInput.id} type={formInput.type}/>
+      <input className="p-1" id={formInput.id} type={formInput.type}/>
     </div>)
   })
 }
