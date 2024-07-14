@@ -7,12 +7,16 @@ export type FormInput = {
 }
 
 export const GenerateFormElements = (formInputs: FormInput[]) => {
-  return <>
-    {/* write element generation code here */}
-  </>
+  // write element generation code here
+  return
 }
 
 const SignIn = () => {
+  let formInputs = [
+    {label: "Email", id: "email", type: "email"},
+    {label: "Password", id: "password", type: "password"}
+  ];
+
   // write code here
 
   const signIn = (event: FormEvent) => {
