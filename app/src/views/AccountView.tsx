@@ -7,7 +7,12 @@ const AccountView = () => {
 
   return (<div>
     <h1>Account View</h1>
-    {/* create elements here */}
+    {data.map(element => {
+      return <div>
+        <span>{element.label}</span>
+        <span>{element.content}</span>
+      </div>
+    })}
   </div>)
 }
 
